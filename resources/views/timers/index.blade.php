@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="container">
-        @forelse($timers->chunk(4) as $chunk)
+        @forelse($timers->chunk(3) as $chunk)
             <div class="row">
                 @foreach($chunk as $timer)
                     <div class="col-md-4">
