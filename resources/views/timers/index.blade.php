@@ -14,7 +14,7 @@
                                     <a href="/timers/{{$timer->id}}/destroy"><i class="pull-right fa fa-trash text-red"></i></a>
                                 @endif
                             </h5>
-                            <h3 data-countdown="{{$timer->date}}">{{ $timer->date->format('jS M \'y - H:i') }}</h3>
+                            <h3 data-countdown="{{$timer->date}}">{{ $timer->date->diffForHumans()) }}</h3>
                             <small class="card-text text-muted">{{ $timer->date->format('jS F Y \a\t H:i') }}</small>
                         </div>
                     </div>
