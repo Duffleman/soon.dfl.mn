@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Soon!</title>
 
-        <!-- Bootstrap CSS -->
         <link href="/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="/css/site.css">
@@ -33,9 +32,7 @@
 
         @yield('content')
 
-        <!-- jQuery -->
-        <script src="//code.jquery.com/jquery.js"></script>
-        <!-- Bootstrap JavaScript -->
+        <script src="/js/jquery-2.1.4.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/jquery.countdown.min.js"></script>
         @yield('javascript')
