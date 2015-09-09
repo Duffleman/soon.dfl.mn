@@ -15,6 +15,7 @@
                                 @endif
                             </h5>
                             <h3 data-countdown="{{$timer->date}}">{{ $timer->date->format('jS M \'y - H:i') }}</h3>
+                            <small class="card-text text-muted">{{ $timer->date->format('jS F Y \a\t H:i') }}</small>
                         </div>
                     </div>
                 @endforeach
