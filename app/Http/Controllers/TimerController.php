@@ -26,7 +26,7 @@ class TimerController extends Controller
         if (auth()->check()) {
             $timers = auth()->user()->timers()->orderBy('date')->get();
         } else {
-            $timers = Timer::all();
+            $timers = Timer::orderBy('date')->get();
         }
 
         return view('timers.index', compact('timers'));
