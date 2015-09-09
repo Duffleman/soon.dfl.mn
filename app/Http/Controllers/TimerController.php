@@ -23,7 +23,11 @@ class TimerController extends Controller
      */
     public function index()
     {
-        $timers = auth()->user()->timers()->orderBy('date')->get();
+        if (auth()->check()) {
+            $timers = auth()->user()->timers()->orderBy('date')->get();
+        } else {
+            $timers = Timer::all();
+        }
 
         return view('timers.index', compact('timers'));
     }
@@ -104,6 +108,7 @@ class TimerController extends Controller
     {
         $timer->delete();
         flash()->success('Timer deleted.');
+
         return redirect('/');
     }
 }
